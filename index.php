@@ -49,7 +49,7 @@
                 <h5 class="mt-2 text-primary ms-3 float-start">All users</h5>
             </div>
             <div class="col-lg-6">
-                <button href="#" type="button" class="btn btn-primary mr-3 float-right">
+                <button href="#" type="button" class="btn btn-primary mr-3 float-right" data-toggle="modal" data-target="#addingUserModal">
                     <i class="fas fa-user-plus fa-lg mr-2"></i>Add new user</button>
                 <a href="#" class="btn btn-success mr-3 float-right"><i class="fas fa-table fa-lg me-2"></i>Export to Excel</a>
             </div>
@@ -94,11 +94,49 @@
     </div>
 
 
+    <!-- Adding new users modal -->
 
 
 
+    <div class="modal fade" id="addingUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Add New User</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" id="form-data">
+                        <div class="formGroup my-3">
+                            <label for="fname">First Name:</label>
+                            <input type="text" name="fname" placeholder="Enter Your Firstname" class="form-control" required>
+                        </div>
+                        <div class="formGroup my-3">
+                            <label for="lname">Last Name:</label>
+                            <input type="text" name="lname" placeholder="Enter Your Lastname" class="form-control" required>
+                        </div>
 
+                        <div class="formGroup my-3">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" placeholder="Enter Your Email" class="form-control" required>
+                        </div>
 
+                        <div class="formGroup my-3">
+                            <label for="phone">Phone Number:</label>
+                            <input type="text" name="phone" placeholder="Enter Your Phone No." class="form-control" required>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
